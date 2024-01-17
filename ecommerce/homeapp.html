@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body class="">
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                
+                       
+                <button class="btn1"onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+                <button  class="btn1"onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i></button>
+                <div id="id01" class="modal">
+
+                   <form class="modal-content animate" action="firstpage.html"onsubmit="return validateForm()" method="get" name="myForm">
+                     <div class="imgcontainer">
+                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar" class="avatar">
+                     </div>
+                 
+                     <div class="container">
+                       <label for="uname"><b>Username</b></label>
+                       <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                       <label for="psw"><b>Password</b></label>
+                       <input type="password" placeholder="Enter Password" name="psw" required>
+                         
+                       <button type="submit"class="sig" onclick="sign()"><h3>login</h3></button>
+                      
+                      
+                      
+                      
+                      
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                       <span class="psw">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 <!-- sign up form-->
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 <div id="id02" class="modal2">
+                   
+                   <form name="myForm2"class="modal2-content animate" action="firstpage.html" method="get">
+                     <div class="imgcontainer2">
+                       <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar2" class="avatar2">
+                     </div>
+                 
+                     <div class="container2">
+                     
+                        <label for="uname"><b>name</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" id="kl" required>
+                        <label for="uname2"><b>email</b></label>
+                        <input type="email" placeholder="Enter email address" name="uname2" id="kl2" required>
+                        <label for="psw2"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw2" id="kl3" required>
+                           <label for="psw21"><b>phone-number</b></label>
+                        <input type="text" placeholder="Enter number" name="psw21" id="kl4" required>
+                       
+                       
+                       <button type="submit"class="sig" onclick="sign()"><h3>signin</h3></button>
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container2" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                       <span class="psw2">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 
+                 <script>
+                 // Get the modal
+                 var modal = document.getElementById('id01');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal) {
+                         modal.style.display = "none";
+                     }}
+                     var modal2 = document.getElementById('id02');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal2) {
+                         modal12.style.display = "none";
+                     }
+                 }
+                 function sign() {
+
+                   let x = document.forms["myForm"]["uname"].value;
+let y = document.forms["myForm"]["psw"].value;
+let a = document.forms["myForm"]["uname2"].value;
+let b = document.forms["myForm"]["psw2"].value;
+if(x==""){
+alert("user name must be filled:");
+}
+else if(y==""){
+alert("password must be filled:");
+}
+else if(a==""){
+alert("email must be filled:");
+}
+else if(b==""){
+alert("phone number must be filled:");
+}
+else{
+alert("you are sucessfully login:");
+
+                     }
+                     
+
+                 }
+                 </script>
+                    
+                
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li onclick="window.location.href='firstpage.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">HOME</li>
+                 <li onclick="window.location.href='about.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">ABOUT</li>
+                 <li onclick="window.location.href='team.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">TEAM</li>
+                 <li onclick="window.location.href='contact.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">CONTACT</li>
+                <a href="footwear.html">FOOTWEAR</a>
+                <a href="electronics.html">ELECTRONICS</a>
+                <a href="beauty.html">BEAUTY-PRODUCTS</a>
+                <a href="cloths.html">MENS-WEAR</a>
+                <a href="wocloths.html">WOMENS-WEAR</a>
+                <a href="chcloths.html">KIDS-WEAR</a>
+                <a href="watchs.html">WATCHES</a>
+                <a href="mobile.html">MOBILE</a>
+                <a href="homeacce.html">HOME-Accesories</a>
+                <a href="kitchen.html">KITCHEN</a>
+                <a href="grocery.html">GROCERY</a>
+                <a href="jewel.html">JEWELIRY</a>
+                <a href="bag.html">BAGS</a>
+                <a href="sunglass.html">SUNGLASSES</a>
+                <a href="kidtoy.html">KIDS-TOY</a>
+                <a href="homeapp.html" style="color: white;">HOME-APPLIANCES</a>
+                <a href="homedecor.html">HOME-DECOR</a>
+              </div>
+              
+              <div id="main">
+                
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+                
+            
+
+            <ul class="menu-items">
+                <li><a href="firstpage.html" style="color: blueviolet;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+            </div>
+            <form role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                </div>
+            </form>
+        </div>
+        
+    </nav>
+<h2 class="iop" style="display: flex; text-align: center;">Home Appliances</h2>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="images/helecslider1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="images/helecslider2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="images/helecslider3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="images/helecslider4.jpg" style="width:100%">
+    <div class="text">Caption four</div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+
+
+    <div class="container">
+
+
+
+
+        <header>
+            
+            <div class="shopping">
+                
+                <button id="end" style="position: relative;right: 800px; height: 100px; width: 100px; background-image: url(images/addtoc.jpeg);background-size: cover;"><h3>click me</h3></button>
+              <span class="quantity">0</span>
+            </div>
+            <h2 class="open">open</h4>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>PRODUCTS</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <div class="nextpage">buy-now</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="images/logo2.jpeg" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="cloths.html">Clothing Store</a>
+                <a href="footwear.html">Trending Shoes</a>
+                <a href="homeacce.html">Home-Accessories</a>
+                <a href="grocery.html">grocerries</a>
+            </div>
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+                <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+                <a href="privacy.html">Privacy policy</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <h3>Design and Code by Krish Agarwal</h3>
+            </div>
+        </div>
+    </footer>
+        
+    <script>let openShopping = document.getElementById('end');
+        let closeShopping = document.querySelector('.closeShopping');
+        let list = document.querySelector('.list');
+        let listCard = document.querySelector('.listCard');
+        let body = document.querySelector('body');
+        let total = document.querySelector('.total');
+        let quantity = document.querySelector('.quantity');
+        let nextpage=document.querySelector('.nextpage');
+        openShopping.addEventListener('click', ()=>{
+            body.classList.add('active');
+        })
+        closeShopping.addEventListener('click', ()=>{
+            body.classList.remove('active');
+        })
+        nextpage.addEventListener('click', ()=>{
+            window.location.replace("checkoutform.html")
+        })
+        let products = [
+            {
+                id: 1,
+                name: 'Redmi 80 cm (32 inches) HD Ready Android Smart TV with Vivid Picture Engine & 20W Dolby Audio (Black)',
+                image: "hoelec1.jpg",
+                price: 24999.00,
+                
+                 des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+            },
+            {
+                id: 2,
+                name: 'VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S (Black)',
+                image: 'hoelec2.jpg',
+                price: 16999.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star"></span>`    
+            },
+            {
+                id: 3,
+                name: 'Acer 139 cm (55 inches) Advanced I Series 4K Ultra HD Smart LED Google TV AR55GR2851UDFL (Black)',
+                image: 'hoelec3.jpg',
+                price: 59999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+                
+            },
+            {
+                id: 4,
+                name: 'Acer 139 cm (55 inches) I Series 4K Ultra HD Android Smart LED TV AR55AR2851UDFL (Black)',
+                image: 'hoelec4.jpg',
+                price: 47990.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 5,
+                name: 'TOSHIBA 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55M550LP (Black)',
+                image: 'hoelec5.jpg',
+                price: 79990.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 6,
+                name: 'MI 80 cm (32 inches) 5A Series HD Ready Smart Android LED TV L32M7-5AIN (Black)',
+                image: 'hoelec6.jpg',
+                price: 24999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 7,
+                name: 'Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32R8-FVIN (Black)',
+                image: 'hoelec7.jpg',
+                price: 24999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 8,
+                name: 'Hisense 305 cm (120 inches) Trichrom ALR Screen Series 4K Ultra HD Smart Laser TV 120L9HE (Black)',
+                image: 'hoelec8.jpg',
+                price: 499999.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 9,
+                name: 'Hisense 305 cm (120 inches) Trichrom ALR Screen Series 4K Ultra HD Smart Laser TV 120L9HE (Black)',
+                image: 'hoelec9.jpg',
+                price: 499999.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 10,
+                name: 'MI 80 cm (32 inches) A Series HD Ready Smart Google TV L32M8-5AIN (Black)',
+                image: 'hoelec10.jpg',
+                price: 24999.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 11,
+                name: 'Whirlpool 240 L Frost Free Triple-Door Refrigerator (FP 263D PROTTON ROY ARCTIC STEEL(N)',
+                image: 'hoelec11.jpg',
+                price: 25790.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 12,
+                name: 'Whirlpool 260 L Frost-Free Triple-Door Refrigerator (FP 283D PROTTON ROY, German Steel)',
+                image: 'hoelec12.jpg',
+                price: 27490.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star"></span>`
+              
+
+            },
+            {
+                id: 13,
+                name: 'Panasonic 280 L 2 Star NR-TH292BPRN Frost Free Deep Wine Refrigerator',
+                image: 'hoelec13.webp',
+                price: 30508.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 14,
+                name: 'Panasonic 592 L Wifi Inverter Frost-Free Side by Side Refrigerator (NR-BS62MKX1, Black, Stainless Steel Finish)',
+                image: 'hoelec14.webp',
+                price: 70490.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 15,
+                name: 'Whirlpool 260 L Frost-Free Triple-Door Refrigerator (FP 283D PROTTON ROY, German Steel)',
+                image: 'hoelec15.jpg',
+                price: 27490.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 16,
+                name: 'Haier 531 L Inverter Frost-Free Side-by-Side Refrigerator (HRB-550KG, Black,Convertible)',
+                image: 'hoelec16.webp',
+                price: 76990.00,
+                des:`<span>4.7</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 17,
+                name: `Haier 630L Frost Free Inverter Side by Side Refrigerator (HES-690SS-P, Shiny Steel, Convertible)`,
+                image: 'hoelec17.jpg',
+                price: 59990.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 18,
+                name: 'Panasonic 592 L Wifi Inverter Frost-Free Side by Side Refrigerator (NR-BS62MKX1, Black, Stainless Steel Finish)',
+                image: 'hoelec18.webp',
+                price: 70490.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 19,
+                name: 'ELECTROLUX 453L Frost Free Inverter Double Door Refrigerator, Bottom Freezer, TasteLockAuto & TasteGuard Technology, Stainless Steel, UltimateTaste 500, EBE4502C-S',
+                image: 'hoelec19.jpg',
+                price: 56990.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 20,
+                name: 'Havells-Lloyd 310 L 2 Star Inverter Frost Free Double Door Refrigerator Appliance (GLFF312ASRT1PB Sakura Red, 2022 Model)',
+                image: 'hoelec20.webp',
+                price: 27900.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 21,
+                name: 'LG 1.5 Ton 5 Star VIRAAT, DUAL Inverter Split AC (Copper, Super Convertible 5-in-1 Cooling, HD Filter with Anti-Virus Protection, 2023 Model, RS-Q19BNZE, White)',
+                image: 'hoelec21.jpg',
+                price: 42990.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 22,
+                name: ' Daikin 1.5 Ton 5 Star Inverter Split AC (Copper, PM 2.5 Filter, 2022 Model, MTKM50U, White)',
+                image: 'hoelec22.webp',
+                price: 45490.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 23,
+                name: 'LG 1.5 Ton 5 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protection, 2023 Model, RS-Q19YNZE, White)',
+                image: 'hoelec23.webp',
+                price: 43490.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 24,
+                name: 'Daikin 1.5 Ton 5 Star Inverter Split AC (Copper, PM 2.5 Filter, 2022 Model, MTKM50U, White)',
+                image: 'hoelec24.webp',
+                price: 45490.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked  "></span>`
+              
+
+            },
+            {
+                id: 25,
+                name: 'LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, Super Convertible 5-in-1 Cooling, HD Filter with Anti-Virus Protection, 2023 Model, RS-Q18TNXE, White)',
+                image: 'hoelec25.webp',
+                price: 34490.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 26,
+                name: 'Samsung 1.5 Ton 5 Star Inverter Split AC (Copper, Convertible 5-in-1 Cooling Mode, Anti-Bacteria, 2023 Model AR18CYNZABE White)',
+                image: 'hoelec26.jpg',
+                price: 40999.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 27,
+                name: 'Samsung 1.5 Ton 5 Star Wind-Free Technology Inverter Split AC (Copper, Convertible 5-in-1 Cooling Mode, Anti-bacterial Filter, 2023 Model AR18CYNAMWK White)',
+                image: 'hoelec27.webp',
+                price: 42990.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 28,
+                name: 'Panasonic 1.5 Ton 4 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with AI, 4 Way Swing, PM Filter, CS/CU-NU18YKY4W,2023 Model, White)',
+                image: 'hoelec28.webp',
+                price: 39490.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 29,
+                name: `Electrolux 1.5 Ton 5 Star Convertible Inverter Split Air Conditioner (AC), 100% Copper, 4 Step Filtration with PM2.5 Filter & Plasma, 360° Cooling, BlueTech Shield Anti-Corrosion Technology, R32 Refrigerant Technology, 2022 Model, White & Chrome, UltimateHome 500, ESV185C3HA`,
+                image: 'hoelec29.jpg',
+                price: 45590.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 30,
+                name: 'Electrolux 1.5 Ton 3 Star Convertible Inverter Split Air Conditioner (AC), 100% Copper, 3 Step Filtration with PM2.5 Filter, BlueTech Shield Anti-Corrosion Technology, R32 Refrigerant Technology, 2022 Model, White & Copper, UltimateHome 300, ESV183C2CA',
+                image: 'hoelec30.webp',
+                price: 35990.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 31,
+                name: 'LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)',
+                image: 'hoelec31.webp',
+                price: 16990.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 32,
+                name: 'IFB 7 Kg 5 Star Fully Automatic Front Load Washing Machine 2X Power Steam (NEO DIVA BXS 7010, White & Black, In-built Heater, 4 years Comprehensive Warranty)',
+                image: 'hoelec32.jpg',
+                price: 29990.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 33,
+                name: 'LG 8 Kg 5 Star Inverter Direct Drive Touch Panel Fully Automatic Front Load Washing Machine (FHM1408BDM, Steam for Hygiene, In-Built Heater, 6 Motion DD, Middle Black)',
+                image: 'hoelec33.jpg',
+                price: 32990.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },         {
+                id: 34,
+                name: `IFB 7 Kg 5 Star AI Powered Front Load Washing Machine 2X Power Steam (DIVA AQUA MSS 7010, 2023 Model, Metallic Silver, In-built Heater, 4 years Comprehensive Warranty)`,
+                image: 'hoelec34.jpg',
+                price:27990.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 35,
+                name: 'Whirlpool 7.5 Kg 5 Star BloomWash Fully-Automatic Top Loading Washing Machine (360 BW PRO (540) H 7.5 GRAPHITE 10YMW, Graphite, In-Built Heater)',
+                image: 'hoelec35.jpg',
+                price: 29650.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 36,
+                name: 'LG 11 Kg 5 Star Wind Jet Dry Rat Away Technology Semi-Automatic Top Loading Washing Machine (P1155SKAZ, Roller Jet Pulsator, Punch + 3, Middle Black)',
+                image: 'hoelec36.jpg',
+                price: 22490.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+
+        ];
+        let listCards  = [];
+        function initApp(){
+            products.forEach((value, key) =>{
+                let newDiv = document.createElement('div');
+                newDiv.classList.add('item');
+                newDiv.innerHTML = `
+                    <img src="images/${value.image}">
+                    <div class="title">${value.name}</div>
+                    <div class="des">${value.des}</div>
+  
+ <h3 class="jk">in stock</h3></div>
+                    <div class="price"><span style='font-size: 100;'>&#8377</span><strong>${value.price.toLocaleString()}</strong></div>
+                    <button onclick="addToCard(${key})">Add To Card</button>
+                   ` 
+                list.appendChild(newDiv);
+            })
+        }
+        initApp();
+        function addToCard(key){
+            if(listCards[key] == null){
+                // copy product form list to list card
+                listCards[key] = JSON.parse(JSON.stringify(products[key]));
+                listCards[key].quantity = 1;
+            }
+            reloadCard();
+        }
+        function reloadCard(){
+            listCard.innerHTML = '';
+            let count = 0;
+            let totalPrice = 0;
+            listCards.forEach((value, key)=>{
+                totalPrice = totalPrice + value.price;
+                count = count + value.quantity;
+                if(value != null){
+                    let newDiv = document.createElement('li');
+                    newDiv.innerHTML = `
+                        <div><img src="images/${value.image}"/></div>
+                        <div>${value.name}</div>
+                        <div>${value.price.toLocaleString()}</div>
+                        <div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                            <div class="count">${value.quantity}</div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                        </div>`;
+                        listCard.appendChild(newDiv);
+                }
+            })
+            total.innerText = totalPrice.toLocaleString();
+            quantity.innerText = count;
+        }
+        function changeQuantity(key, quantity){
+            if(quantity == 0){
+                delete listCards[key];
+            }else{
+                listCards[key].quantity = quantity;
+                listCards[key].price = quantity * products[key].price;
+            }
+            reloadCard();
+        }
+        </script>
+</body>
+</html>

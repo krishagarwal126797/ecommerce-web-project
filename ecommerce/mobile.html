@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body class="">
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                    
+                <button class="btn1"onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+                <button  class="btn1"onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i></button>
+                <div id="id01" class="modal">
+
+                   <form class="modal-content animate" action="firstpage.html"onsubmit="return validateForm()" method="get" name="myForm">
+                     <div class="imgcontainer">
+                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar" class="avatar">
+                     </div>
+                 
+                     <div class="container">
+                       <label for="uname"><b>Username</b></label>
+                       <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                       <label for="psw"><b>Password</b></label>
+                       <input type="password" placeholder="Enter Password" name="psw" required>
+                         
+                       <button type="submit"class="sig" onclick="sign()"><h3>login</h3></button>
+                      
+                      
+                      
+                      
+                      
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                       <span class="psw">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 <!-- sign up form-->
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 <div id="id02" class="modal2">
+                   
+                   <form name="myForm2"class="modal2-content animate" action="firstpage.html" method="get">
+                     <div class="imgcontainer2">
+                       <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar2" class="avatar2">
+                     </div>
+                 
+                     <div class="container2">
+                      
+                        <label for="uname"><b>name</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" id="kl" required>
+                        <label for="uname2"><b>email</b></label>
+                        <input type="email" placeholder="Enter email address" name="uname2" id="kl2" required>
+                        <label for="psw2"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw2" id="kl3" required>
+                           <label for="psw21"><b>phone-number</b></label>
+                        <input type="text" placeholder="Enter number" name="psw21" id="kl4" required>
+                       
+                       
+                       <button type="submit"class="sig" onclick="sign()"><h3>signin</h3></button>
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container2" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                       <span class="psw2">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 
+                 <script>
+                 // Get the modal
+                 var modal = document.getElementById('id01');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal) {
+                         modal.style.display = "none";
+                     }}
+                     var modal2 = document.getElementById('id02');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal2) {
+                         modal12.style.display = "none";
+                     }
+                 }
+                 function sign() {
+
+                   let x = document.forms["myForm"]["uname"].value;
+let y = document.forms["myForm"]["psw"].value;
+let a = document.forms["myForm"]["uname2"].value;
+let b = document.forms["myForm"]["psw2"].value;
+if(x==""){
+alert("user name must be filled:");
+}
+else if(y==""){
+alert("password must be filled:");
+}
+else if(a==""){
+alert("email must be filled:");
+}
+else if(b==""){
+alert("phone number must be filled:");
+}
+else{
+alert("you are sucessfully login:");
+
+                     }
+                     
+
+                 }
+                 </script>
+                
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li onclick="window.location.href='firstpage.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">HOME</li>
+                 <li onclick="window.location.href='about.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">ABOUT</li>
+                 <li onclick="window.location.href='team.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">TEAM</li>
+                 <li onclick="window.location.href='contact.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">CONTACT</li>
+                <a href="footwear.html">FOOTWEAR</a>
+                <a href="electronics.html">ELECTRONICS</a>
+                <a href="beauty.html">BEAUTY-PRODUCTS</a>
+                <a href="cloths.html">MENS-WEAR</a>
+                <a href="wocloths.html">WOMENS-WEAR</a>
+                <a href="chcloths.html">KIDS-WEAR</a>
+                <a href="watchs.html">WATCHES</a>
+                <a href="mobile.html" style="color: white;">MOBILE</a>
+                <a href="homeacce.html">HOME-Accesories</a>
+                <a href="kitchen.html">KITCHEN</a>
+                <a href="grocery.html">GROCERY</a>
+                <a href="jewel.html">JEWELIRY</a>
+                <a href="bag.html">BAGS</a>
+                <a href="sunglass.html">SUNGLASSES</a>
+                <a href="kidtoy.html">KIDS-TOY</a>
+                <a href="homeapp.html">HOME-APPLIANCES</a>
+                <a href="homedecor.html">HOME-DECOR</a>
+              </div>
+              
+              <div id="main">
+                
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+                
+            
+
+            <ul class="menu-items">
+                <li><a href="firstpage.html" style="color: blueviolet;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+            </div>
+            <form role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                </div>
+            </form>
+        </div>
+        
+    </nav>
+<h2 class="iop" style="display: flex; text-align: center;">Smart phones</h2>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="images/mobslider4.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="images/mobslider1.jpeg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="images/mobslider2.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="images/mobslider3.jpg" style="width:100%">
+    <div class="text">Caption four</div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+
+
+    <div class="container">
+
+
+
+
+        <header>
+            <div class="shopping">
+                
+                <button id="end" style="position: relative;right: 800px; height: 100px; width: 100px; background-image: url(images/addtoc.jpeg);background-size: cover;"><h3>click me</h3></button>
+              <span class="quantity">0</span>
+            </div>
+            <h2 class="open">open</h4>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>PRODUCTS</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <div class="nextpage">buy-now</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="images/logo2.jpeg" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="cloths.html">Clothing Store</a>
+                <a href="footwear.html">Trending Shoes</a>
+                <a href="homeacce.html">Home-Accessories</a>
+                <a href="grocery.html">grocerries</a>
+            </div>
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+                <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+                <a href="privacy.html">Privacy policy</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <h3>Design and Code by Krish Agarwal</h3>
+            </div>
+        </div>
+    </footer>
+    <script>let openShopping = document.getElementById('end');
+        let closeShopping = document.querySelector('.closeShopping');
+        let list = document.querySelector('.list');
+        let listCard = document.querySelector('.listCard');
+        let body = document.querySelector('body');
+        let total = document.querySelector('.total');
+        let quantity = document.querySelector('.quantity');
+        let nextpage=document.querySelector('.nextpage');
+        openShopping.addEventListener('click', ()=>{
+            body.classList.add('active');
+        })
+        closeShopping.addEventListener('click', ()=>{
+            body.classList.remove('active');
+        })
+        nextpage.addEventListener('click', ()=>{
+            window.location.replace("checkoutform.html")
+        })
+        let products = [
+            {
+                id: 1,
+                name: ' OnePlus Nord 3 5G (Misty Green, 8GB RAM, 128GB Storage)',
+                image: "mobile1.jpg",
+                price: 33999.00,
+                
+                 des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+            },
+            {
+                id: 2,
+                name: ' Redmi Note 12 5G Frosted Green 4GB RAM 128GB ROM | 1st Phone with 120Hz Super AMOLED and Snapdragon® 4 Gen 1 | 48MP AI Triple Camera',
+                image: 'mobile2.jpg',
+                price: 15998.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star"></span>`    
+            },
+            {
+                id: 3,
+                name: 'realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display',
+                image: 'mobile3.jpg',
+                price: 10000.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+                
+            },
+            {
+                id: 4,
+                name: 'Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Fast Charger Included | So Pink',
+                image: 'mobile4.jpg',
+                price: 11999.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 5,
+                name: 'realme narzo N53 (Feather Black, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display',
+                image: 'mobile5.jpg',
+                price: 9499.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 6,
+                name: 'Samsung Galaxy M13 (Aqua Green, 4GB, 64GB Storage) | 6000mAh Battery | Upto 8GB RAM with RAM Plus',
+                image: 'mobile6.jpg',
+                price: 9199.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 7,
+                name: 'Redmi 12C (Matte Black, 4GB RAM, 64GB Storage) | High Performance Mediatek Helio G85 | Big 17cm(6.71) HD+ Display with 5000mAh(typ) Battery',
+                image: 'mobile7.jpg',
+                price: 6999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 8,
+                name: ' Redmi 12 5G Jade Black 4GB RAM 128GB ROM',
+                image: 'mobile8.jpg',
+                price: 11999.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 9,
+                name: 'Redmi A2 (Aqua Blue, 2GB RAM, 32GB Storage) | Powerful Octa Core G36 Processor | Upto 7GB RAM | Large 16.5 cm HD+ Display with Massive 5000mAh Battery | 2 Years Warranty [Limited time Offer]',
+                image: 'mobile9.jpg',
+                price: 6299.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 10,
+                name: 'realme narzo 60X 5G（Stellar Green,6GB,128GB Storage ） Up to 2TB External Memory | 50 MP AI Primary Camera | Segments only 33W Supervooc Charge',
+                image: 'mobile10.jpg',
+                price: 13499.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 11,
+                name: 'Redmi Note 12 (Lunar Black, 6GB RAM, 64GB Storage)',
+                image: 'mobile11.jpg',
+                price: 11999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 12,
+                name: ' Apple iPhone 13 (128GB) - Midnight',
+                image: 'mobile12.jpg',
+                price: 50999.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star"></span>`
+              
+
+            },
+            {
+                id: 13,
+                name: 'Apple iPhone 15 (128 GB) - Blue',
+                image: 'mobile13.jpg',
+                price: 79990.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 14,
+                name: 'Apple iPhone 15 Pro Max (256 GB) - Natural Titanium',
+                image: 'mobile14.jpg',
+                price: 159900.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 15,
+                name: 'Apple iPhone 15 Pro (1 TB) - Natural Titanium',
+                image: 'mobile15.jpg',
+                price: 184900.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 16,
+                name: 'realme C53 (Champion Black, 6GB RAM, 128GB Storage)',
+                image: 'mobile16.jpg',
+                price: 11990.00,
+                des:`<span>4.7</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 17,
+                name: `
+realme C55 (Rainforest) 8GB RAM, 128GB Storage`,
+                image: 'mobile17.jpg',
+                price: 13390.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 18,
+                name: 'realme 11 Pro 5G (Sunrise Beige, 8GB RAM, 256GB Storage) | 120 Hz Curved Display | 100MP Prolight Camera | 7050 5G Dimensity | 67W SUPERVOOC | 12GB Dynamic RAM | Premier Vegan Leather Finish Design',
+                image: 'mobile18.jpg',
+                price: 24150.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 19,
+                name: `Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India's First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android
+Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India's First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android`,
+                image: 'mobile19.jpg',
+                price: 19999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 20,
+                name: 'Motorola razr 40 (Sage Green, 8GB RAM, 256GB Storage) | External AMOLED Display | 6.9" AMOLED 144Hz Display | 64MP Main Camera | Android 13',
+                image: 'mobile20.jpg',
+                price: 49999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 21,
+                name: 'Motorola G62 5G (6GB, 128GB) (Midnight Gray)',
+                image: 'mobile21.jpg',
+                price: 15999.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 22,
+                name: ' TECNO Phantom V Fold 5G Black (12GB RAM,256GB Storage) | The First Full Size Fold | LTPO AMOLED Display | 4nm D9000+ Fast Processor',
+                image: 'mobile22.jpg',
+                price: 78499.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 23,
+                name: 'Samsung Galaxy Z Fold4 5G (Graygreen, 12GB RAM, 256GB Storage) with No Cost EMI/Additional Exchange Offers',
+                image: 'mobile23.jpg',
+                price: 139999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 24,
+                name: 'Xiaomi 12 Pro | 5G (Noir Black, 12GB RAM, 256GB Storage) | Snapdragon 8 Gen 1 | 50+50+50MP Flagship Cameras (OIS) | 10bit 2K+ Curved AMOLED Display | Sound by Harman Kardon',
+                image: 'mobile24.jpg',
+                price: 41999.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked  "></span>`
+              
+
+            },
+            {
+                id: 25,
+                name: 'Redmi Note 11T 5G (Matte Black, 6GB RAM, 128GB ROM)| Dimensity 810 5G | 33W Pro Fast Charging | Charger Included | Additional Exchange Offers',
+                image: 'mobile25.jpg',
+                price: 13999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 26,
+                name: 'Samsung Galaxy M34 5G (Prism Silver,8GB,128GB)|120Hz sAMOLED Display|50MP Triple No Shake Cam|6000 mAh Battery|4 Gen OS Upgrade & 5 Year Security Update|16GB RAM with RAM+|Android 13|Without Charger',
+                image: 'mobile26.jpg',
+                price: 18499.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 27,
+                name: 'Samsung Galaxy M33 5G (Mystique Green, 8GB, 128GB Storage) | 6000mAh Battery | Upto 16GB RAM with RAM Plus | Without Charger',
+                image: 'mobile27.jpg',
+                price: 16999.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 28,
+                name: ' OnePlus 11 5G (Titan Black, 16GB RAM, 256GB Storage)',
+                image: 'mobile28.jpg',
+                price: 61999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 29,
+                name: `Samsung Galaxy A54 5G (Awesome Violet, 8GB, 256GB Storage) | 50 MP No Shake Cam (OIS) | IP67 | Gorilla Glass 5 | Voice Focus | Without Charger`,
+                image: 'mobile29.jpg',
+                price: 37449.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 30,
+                name: 'OnePlus 10R 5G (Sierra Black, 8GB RAM, 128GB Storage, 80W SuperVOOC)',
+                image: 'mobile30.jpg',
+                price: 27999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 31,
+                name: 'OnePlus Nord CE 2 Lite 5G (Blue Tide, 6GB RAM, 128GB Storage)',
+                image: 'mobile31.jpg',
+                price: 17998.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 32,
+                name: 'TECNO Pova 5 Pro 5G (Dark Illusion, 8GB RAM,128GB Storage)| Segment 1st 68W Ultra Fast Charging | 50MP AI Dual Camera | Indias 1st Multi-Colored Backlit ARC Interface | 6.78”FHD+ Dot-in Display',
+                image: 'mobile32.jpg',
+                price: 14999.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 33,
+                name: 'TECNO POVA 4 (Cryolite Blue,8GB RAM,128GB Storage)| Helio G99 Processor | 6000mAh Battery 18W Charger Included | 50MP Rear Camera',
+                image: 'mobile33.jpg',
+                price: 11999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },         {
+                id: 34,
+                name: `
+
+itel S23+| 3D Curved Amoled Display| 16GB* RAM+256GB ROM| in-Display Fingerprint| 50MP AI Dual Rear + 32MP Front Camera| 5000mAh Battery| 2 Years Warranty| Lake Cyan`,
+                image: 'mobile34.jpg',
+                price:13999.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 35,
+                name: 'TECNO Camon 20 Pro 5G (Serenity Blue, 8GB RAM,256GB Storage)| Indias 1st MediaTek Dimensity 8050 Processor | 16GB Expandable RAM | 64MP RGBW(G+P) OIS Rear Camera|6.67 FHD+ Big AMOLED Screen',
+                image: 'mobile35.jpg',
+                price: 17119.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 36,
+                name: 'TECNO Spark 10 Pro (Moon Explorer Edition,8GB RAM,128GB Storage)|16GB Expandable RAM | 32 MP Selfie Camera| Glass Back and Flagship Triple Matrix Design',
+                image: 'mobile36.jpg',
+                price: 15999.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+
+        ];
+        let listCards  = [];
+        function initApp(){
+            products.forEach((value, key) =>{
+                let newDiv = document.createElement('div');
+                newDiv.classList.add('item');
+                newDiv.innerHTML = `
+                    <img src="images/${value.image}">
+                    <div class="title">${value.name}</div>
+                    <div class="des">${value.des}</div>
+  
+ <h3 class="jk">in stock</h3></div>
+                    <div class="price"><span style='font-size: 100;'>&#8377</span><strong>${value.price.toLocaleString()}</strong></div>
+                    <button onclick="addToCard(${key})">Add To Card</button>
+                   ` 
+                list.appendChild(newDiv);
+            })
+        }
+        initApp();
+        function addToCard(key){
+            if(listCards[key] == null){
+                // copy product form list to list card
+                listCards[key] = JSON.parse(JSON.stringify(products[key]));
+                listCards[key].quantity = 1;
+            }
+            reloadCard();
+        }
+        function reloadCard(){
+            listCard.innerHTML = '';
+            let count = 0;
+            let totalPrice = 0;
+            listCards.forEach((value, key)=>{
+                totalPrice = totalPrice + value.price;
+                count = count + value.quantity;
+                if(value != null){
+                    let newDiv = document.createElement('li');
+                    newDiv.innerHTML = `
+                        <div><img src="images/${value.image}"/></div>
+                        <div>${value.name}</div>
+                        <div>${value.price.toLocaleString()}</div>
+                        <div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                            <div class="count">${value.quantity}</div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                        </div>`;
+                        listCard.appendChild(newDiv);
+                }
+            })
+            total.innerText = totalPrice.toLocaleString();
+            quantity.innerText = count;
+        }
+        function changeQuantity(key, quantity){
+            if(quantity == 0){
+                delete listCards[key];
+            }else{
+                listCards[key].quantity = quantity;
+                listCards[key].price = quantity * products[key].price;
+            }
+            reloadCard();
+        }
+        </script>
+</body>
+</html>

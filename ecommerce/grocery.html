@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+ 
+</head>
+<body class="">
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                    
+                <button class="btn1"onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+                <button  class="btn1"onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i></button>
+                <div id="id01" class="modal">
+
+                   <form class="modal-content animate" action="wocloths.html"onsubmit="return validateForm()" method="get" name="myForm">
+                     <div class="imgcontainer">
+                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar" class="avatar">
+                     </div>
+                 
+                     <div class="container">
+                       <label for="uname"><b>Username</b></label>
+                       <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                       <label for="psw"><b>Password</b></label>
+                       <input type="password" placeholder="Enter Password" name="psw" required>
+                         
+                       <button type="submit"class="sig" onclick="sign()"><h3>login</h3></button>
+                      
+                      
+                      
+                      
+                      
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                       <span class="psw">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 <!-- sign up form-->
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 <div id="id02" class="modal2">
+                   
+                   <form name="myForm2"class="modal2-content animate" action="firstpage.html" method="get">
+                     <div class="imgcontainer2">
+                       <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar2" class="avatar2">
+                     </div>
+                 
+                     <div class="container2">
+                      
+                        <label for="uname"><b>name</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" id="kl" required>
+                        <label for="uname2"><b>email</b></label>
+                        <input type="email" placeholder="Enter email address" name="uname2" id="kl2" required>
+                        <label for="psw2"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw2" id="kl3" required>
+                           <label for="psw21"><b>phone-number</b></label>
+                        <input type="text" placeholder="Enter number" name="psw21" id="kl4" required>
+                       
+                       
+                       <button type="submit"class="sig" onclick="sign()"><h3>signin</h3></button>
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container2" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                       <span class="psw2">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 
+                 <script>
+                 // Get the modal
+                 var modal = document.getElementById('id01');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal) {
+                         modal.style.display = "none";
+                     }}
+                     var modal2 = document.getElementById('id02');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal2) {
+                         modal12.style.display = "none";
+                     }
+                 }
+                 function sign() {
+
+                   let x = document.forms["myForm"]["uname"].value;
+let y = document.forms["myForm"]["psw"].value;
+let a = document.forms["myForm"]["uname2"].value;
+let b = document.forms["myForm"]["psw2"].value;
+if(x==""){
+alert("user name must be filled:");
+}
+else if(y==""){
+alert("password must be filled:");
+}
+else if(a==""){
+alert("email must be filled:");
+}
+else if(b==""){
+alert("phone number must be filled:");
+}
+else{
+alert("you are sucessfully login:");
+
+                     }
+                     
+
+                 }
+                 </script>
+                    
+                
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li onclick="window.location.href='firstpage.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">HOME</li>
+                <li onclick="window.location.href='about.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">ABOUT</li>
+                <li onclick="window.location.href='team.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">TEAM</li>
+                <li onclick="window.location.href='contact.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">CONTACT</li>
+               <a href="footwear.html">FOOTWEAR</a>
+               <a href="electronics.html">ELECTRONICS</a>
+               <a href="beauty.html">BEAUTY-PRODUCTS</a>
+               <a href="cloths.html">MENS-WEAR</a>
+               <a href="wocloths.html">WOMENS-WEAR</a>
+               <a href="chcloths.html">KIDS-WEAR</a>
+               <a href="watchs.html">WATCHES</a>
+               <a href="mobile.html">MOBILE</a>
+               <a href="homeacce.html">HOME-Accesories</a>
+               <a href="kitchen.html">KITCHEN</a>
+               <a href="grocery.html" style="color: white;">GROCERY</a>
+               <a href="jewel.html">JEWELIRY</a>
+               <a href="bag.html">BAGS</a>
+               <a href="sunglass.html">SUNGLASSES</a>
+               <a href="kidtoy.html">KIDS-TOY</a>
+               <a href="homeapp.html">HOME-APPLIANCES</a>
+               <a href="homedecor.html">HOME-DECOR</a>
+              </div>
+              
+              <div id="main">
+                
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+                
+            
+
+            <ul class="menu-items">
+                <li><a href="firstpage.html" style="color: blueviolet;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+            </div>
+            <form role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                </div>
+            </form>
+        </div>
+        
+    </nav>
+<h2 class="iop" style=" justify-content: center; display: flex;">Grocery</h2>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/grslider1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/grslider2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/grslider3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+ 
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+
+
+    <div class="container">
+
+
+
+
+        <header>
+            
+            <div class="shopping">
+                
+                <button id="end" style="position: relative;right: 800px; height: 100px; width: 100px; background-image: url(images/addtoc.jpeg);background-size: cover;"><h3>click me</h3></button>
+              <span class="quantity">0</span>
+            </div>
+            <h2 class="open">open</h4>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>PRODUCTS</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <div class="nextpage">buy-now</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="images/logo2.jpeg" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="cloths.html">Clothing Store</a>
+                <a href="footwear.html">Trending Shoes</a>
+                <a href="homeacce.html">Home-Accessories</a>
+                <a href="grocery.html" style="color: white;">grocerries</a>
+            </div>
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+                <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+                <a href="privacy.html">Privacy policy</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <h3>Design and Code by Krish Agarwal</h3>
+            </div>
+        </div>
+    </footer>
+        
+    <script>let openShopping = document.getElementById('end');
+        let closeShopping = document.querySelector('.closeShopping');
+        let list = document.querySelector('.list');
+        let listCard = document.querySelector('.listCard');
+        let body = document.querySelector('body');
+        let total = document.querySelector('.total');
+        let quantity = document.querySelector('.quantity');
+        let nextpage=document.querySelector('.nextpage');
+        openShopping.addEventListener('click', ()=>{
+            body.classList.add('active');
+        })
+        closeShopping.addEventListener('click', ()=>{
+            body.classList.remove('active');
+        })
+        nextpage.addEventListener('click', ()=>{
+            window.location.replace("checkoutform.html")
+        })
+        let products = [
+            {
+                id: 1,
+                name: 'Grocery Farm African Cashew Whole & American Almonds Dry Fruits Combo Pack | Packed with Proteins & Fiber | A Powerhouse of Vitamin E, Magnesium & Calcium | Kaju Badam Combo Pack of 2-200gm each',
+                image: "gr1.jpg",
+                price: 449.00,
+                
+                 des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+            },
+            {
+                id: 2,
+                name: '1868 by Tata Tea | Green with Rose | Green tea leaves and Rose Petals | Curated Tea Inspired by India | Flavoured Green Tea | 50 g',
+                image: 'gr2.webp',
+                price: 750.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star"></span>`    
+            },
+            {
+                id: 3,
+                name: 'Amazon Brand - Vedaka Mixed Dal, 1kg |Protein source',
+                image: 'gr3.jpg',
+                price: 149.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+                
+            },
+            {
+                id: 4,
+                name: 'Oreo Cadbury Vanilla Flavour Chocolatey Sandwich Biscuit, 288.75 G',
+                image: 'gr4.webp',
+                price: 69.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 5,
+                name: 'MAGGI 2-Minute Instant Noodles, 840G (12 Pouches X 70G Each), Masala Noodles With Goodness Of Iron, Made With Choicest Quality Spices, Favourite Masala Taste, 840 Grams',
+                image: 'gr5.webp',
+                price: 157.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 6,
+                name: 'Chings Secret Desi Chinese ka Combo Pack (PACK OF 6) 120g',
+                image: 'gr6.jpg',
+                price: 70.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 7,
+                name: 'Soul Mixed Pickle in Olive Oil 275 Grams',
+                image: 'gr7.webp',
+                price: 199.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 8,
+                name: 'Soul Mixed Pickle in Olive Oil 275 Grams',
+                image: 'gr8.jpg',
+                price: 238.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 9,
+                name: 'Ensure Complete, Balanced Nutrition Drink For Adults 400g, Vanilla Flavour, Now With A Special Ingredient HMB And 32 Essential Nutrients To Help Build & Protect Muscle Strength',
+                image: 'gr9.jpg',
+                price: 680.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 10,
+                name: 'Horlicks Chocolate Health & Nutrition Drink for Kids, 1 kg Refill Pack | Taller, Stronger, Sharper | For Immunity & Growth | Health Mix Powder',
+                image: 'gr10.jpg',
+                price: 584.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 11,
+                name: 'Tata Salt | Vacuum Evaporated Iodised Salt | 1 kg',
+                image: 'gr11.webp',
+                price: 28.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 12,
+                name: 'Fortune Premium Kachi Ghani Pure Mustard Oil, 1Litre PET Bottle',
+                image: 'gr12.webp',
+                price: 160.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star"></span>`
+              
+
+            },
+            {
+                id: 13,
+                name: 'Milkmaid Nestle Tin, 380G/400G (Weight May Vary), Liquid',
+                image: 'gr13.webp',
+                price: 139.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 14,
+                name: 'Milkmaid Nestle Tin, 380G/400G (Weight May Vary), Liquid',
+                image: 'gr14.webp',
+                price: 170.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 15,
+                name: 'Kelloggs Chocos Fills 250g | Double Chocolaty, Anytime Snack | 3 Grains: Oats, Wheat & Rice, Protein Rich, 0% Maida',
+                image: 'gr15.webp',
+                price: 185.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 16,
+                name: 'Kelloggs Chocos Fills 250g | Double Chocolaty, Anytime Snack | 3 Grains: Oats, Wheat & Rice, Protein Rich, 0% Maida',
+                image: 'gr16.webp',
+                price: 170.00,
+                des:`<span>4.7</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 17,
+                name:  'Kissan Mixed Fruit Jam , With Real Fruit Ingredients, 200 g',
+                image: 'gr17.jpg',
+                price: 74.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 18,
+                name: 'Fortune Sunlite Refined Sunflower Oil, 1L',
+                image: 'gr18.jpg',
+                price: 115.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 19,
+                name:'Close Up Everfresh+ Anti-Germ Toothpaste, Fresh Breath For 12 Hours, Triple Fresh Formula with Active Zinc & Purifying Gel (150g, Pack of 4)',
+                image: 'gr19.webp',
+                price: 264.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 20,
+                name: 'Close Up Everfresh+ Anti-Germ Toothpaste, Fresh Breath For 12 Hours, Triple Fresh Formula with Active Zinc & Purifying Gel (150g, Pack of 4)',
+                image: 'gr20.webp',
+                price: 340.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 21,
+                name: 'Kelloggs Corn Flakes Real Almond Honey 1kg | High in Iron, Vitamin B1, B2, B3, B6 & C | Naturally Cholesterol Free | Corn Flakes, Breakfast Cereal',
+                image: 'gr21.webp',
+                price: 492.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 22,
+                name: ' Uttam Sugar Sulphurless Sugar, 5kg',
+                image: 'gr22.webp',
+                price: 260.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 23,
+                name: 'Surf Excel Easy Wash Detergent Powder 5 kg | Superfine Washing Powder | Dissolves Easily & Removes Tough Stains | Suitable for all Washing Machines',
+                image: 'gr23.webp',
+                price: 650.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 24,
+                name: 'Vim Dishwash Liquid Gel Lemon Refill Pouch, 2 Ltr | Dishwash Gel Infused With The Power Of Lemons | Leaves No Residue',
+                image: 'gr24.jpg',
+                price: 297.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked  "></span>`
+              
+
+            },
+            {
+                id: 25,
+                name: 'Harpic 1 Litre (Pack of 2) - Original, Disinfectant Toilet Cleaner Liquid | Suitable for Toilet Bowls',
+                image: 'gr25.webp',
+                price: 390.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 26,
+                name: 'Harpic 1 Litre (Pack of 3) - Lemon Bathroom Cleaner Liquid | New Thicker Bathroom Floor Cleaner | Red Harpic Bottle',
+                image: 'gr26.webp',
+                price: 500.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 27,
+                name: 'Fortune Chakki Fresh Atta, 5 kg, 100% Atta 0% Maida',
+                image: 'gr27.webp',
+                price: 220.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 28,
+                name: 'Fortune Chakki Fresh Atta, 5 kg, 100% Atta 0% Maida',
+                image: 'gr28.jpg',
+                price: 210.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 29,
+                name: `Fortune Chakki Fresh Atta, 5 kg, 100% Atta 0% Maida`,
+                image: 'gr29.webp',
+                price: 825.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 30,
+                name: 'Fortune Chana Besan, 500 g',
+                image: 'gr30.webp',
+                price: 45.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 31,
+                name: 'Ahaar Maida 500g + Besan 500g + Sooji 500g + Daliya MP 500g',
+                image: 'gr31.webp',
+                price: 231.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 32,
+                name: 'Ahaar Sabudana/Sago 250 g',
+                image: 'gr32.jpg',
+                price: 51.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 33,
+                name: 'Ahaar Sabudana/Sago 250 g',
+                image: 'gr33.webp',
+                price: 50.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },         {
+                id: 34,
+                name: `Tata Sampann Unpolished Toor Dal (Arhar Dal), 1kg`,
+                image: 'gr34.webp',
+                price:249.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 35,
+                name: 'Maida 400gm',
+                image: 'gr35.webp',
+                price: 80.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 36,
+                name: 'MonBangla Premium Handmade Masala bori (250g)',
+                image: 'gr36.jpg',
+                price: 190.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+
+        ];
+        let listCards  = [];
+        function initApp(){
+            products.forEach((value, key) =>{
+                let newDiv = document.createElement('div');
+                newDiv.classList.add('item');
+                newDiv.innerHTML = `
+                    <img src="images/${value.image}">
+                    <div class="title">${value.name}</div>
+                    <div class="des">${value.des}</div>
+  
+ <h3 class="jk">in stock</h3></div>
+                    <div class="price"><span style='font-size: 100;'>&#8377</span><strong>${value.price.toLocaleString()}</strong></div>
+                    <button onclick="addToCard(${key})">Add To Card</button>
+                   ` 
+                list.appendChild(newDiv);
+            })
+        }
+        initApp();
+        function addToCard(key){
+            if(listCards[key] == null){
+                // copy product form list to list card
+                listCards[key] = JSON.parse(JSON.stringify(products[key]));
+                listCards[key].quantity = 1;
+            }
+            reloadCard();
+        }
+        function reloadCard(){
+            listCard.innerHTML = '';
+            let count = 0;
+            let totalPrice = 0;
+            listCards.forEach((value, key)=>{
+                totalPrice = totalPrice + value.price;
+                count = count + value.quantity;
+                if(value != null){
+                    let newDiv = document.createElement('li');
+                    newDiv.innerHTML = `
+                        <div><img src="images/${value.image}"/></div>
+                        <div>${value.name}</div>
+                        <div>${value.price.toLocaleString()}</div>
+                        <div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                            <div class="count">${value.quantity}</div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                        </div>`;
+                        listCard.appendChild(newDiv);
+                }
+            })
+            total.innerText = totalPrice.toLocaleString();
+            quantity.innerText = count;
+        }
+        function changeQuantity(key, quantity){
+            if(quantity == 0){
+                delete listCards[key];
+            }else{
+                listCards[key].quantity = quantity;
+                listCards[key].price = quantity * products[key].price;
+            }
+            reloadCard();
+        }
+        </script>
+</body>
+</html>

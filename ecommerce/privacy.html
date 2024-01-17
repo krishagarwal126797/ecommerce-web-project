@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                    
+                <button class="btn1"onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+                <button  class="btn1"onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i></button>
+                <div id="id01" class="modal">
+
+                   <form class="modal-content animate" action="wocloths.html"onsubmit="return validateForm()" method="get" name="myForm">
+                     <div class="imgcontainer">
+                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar" class="avatar">
+                     </div>
+                 
+                     <div class="container">
+                       <label for="uname"><b>Username</b></label>
+                       <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                       <label for="psw"><b>Password</b></label>
+                       <input type="password" placeholder="Enter Password" name="psw" required>
+                         
+                       <button type="submit"class="sig" onclick="sign()"><h3>login</h3></button>
+                      
+                      
+                      
+                      
+                      
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                       <span class="psw">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 <!-- sign up form-->
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 <div id="id02" class="modal2">
+                   
+                   <form name="myForm2"class="modal2-content animate" action="firstpage.html" method="get">
+                     <div class="imgcontainer2">
+                       <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar2" class="avatar2">
+                     </div>
+                 
+                     <div class="container2">
+                     
+                        <label for="uname"><b>name</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" id="kl" required>
+                        <label for="uname2"><b>email</b></label>
+                        <input type="email" placeholder="Enter email address" name="uname2" id="kl2" required>
+                        <label for="psw2"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw2" id="kl3" required>
+                           <label for="psw21"><b>phone-number</b></label>
+                        <input type="text" placeholder="Enter number" name="psw21" id="kl4" required>
+                       
+                       
+                       
+                       <button type="submit"class="sig" onclick="sign()"><h3>signin</h3></button>
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container2" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                       <span class="psw2">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 
+                 <script>
+                 // Get the modal
+                 var modal = document.getElementById('id01');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal) {
+                         modal.style.display = "none";
+                     }}
+                     var modal2 = document.getElementById('id02');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal2) {
+                         modal12.style.display = "none";
+                     }
+                 }
+                 function sign() {
+
+                   let x = document.forms["myForm"]["uname"].value;
+let y = document.forms["myForm"]["psw"].value;
+let a = document.forms["myForm"]["uname2"].value;
+let b = document.forms["myForm"]["psw2"].value;
+if(x==""){
+alert("user name must be filled:");
+}
+else if(y==""){
+alert("password must be filled:");
+}
+else if(a==""){
+alert("email must be filled:");
+}
+else if(b==""){
+alert("phone number must be filled:");
+}
+else{
+alert("you are sucessfully login:");
+
+                     }
+                     
+
+                 }
+                 </script>
+                    
+                
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <li onclick="window.location.href='firstpage.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">HOME</li>
+                 <li onclick="window.location.href='about.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">ABOUT</li>
+                 <li onclick="window.location.href='team.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">TEAM</li>
+                 <li onclick="window.location.href='contact.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">CONTACT</li>
+                <a href="footwear.html">FOOTWEAR</a>
+                <a href="electronics.html">ELECTRONICS</a>
+                <a href="beauty.html">BEAUTY-PRODUCTS</a>
+                <a href="cloths.html">MENS-WEAR</a>
+                <a href="wocloths.html">WOMENS-WEAR</a>
+                <a href="chcloths.html">KIDS-WEAR</a>
+                <a href="watchs.html">WATCHES</a>
+                <a href="mobile.html">MOBILE</a>
+                <a href="homeacce.html">HOME-ACCESORIES</a>
+                <a href="kitchen.html">KITCHEN</a>
+                <a href="grocery.html">GROCERY</a>
+                <a href="jewel.html">JEWELIRY</a>
+                <a href="bag.html">BAGS</a>
+                <a href="sunglass.html">SUNGLASSES</a>
+                <a href="kidtoy.html">KIDS-TOY</a>
+                <a href="homeapp.html">HOME-APPLIANCES</a>
+                <a href="homedecor.html">HOME-DECOR</a>
+              </div>
+              
+              <div id="main">
+                
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+                
+            
+
+            <ul class="menu-items">
+                <li><a href="firstpage.html" style="color: blueviolet;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+            </div>
+            <form role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                </div>
+            </form>
+        </div>
+        
+    </nav>
+
+
+
+
+    <h1 style="font-size: 100px; text-align: center; font-family: fantasy;font: 7em sans-serif; margin-top: 40px;">Shopzone.com Privacy Notice</h1>
+<hr>
+<h1 style="font-size: 35px;margin-top: 30px;">Last updated: September 11,2023.</h1>
+<h2 style="font-size: 43px; margin-left: 50px;">We know that you care how information about you is used and shared, and we appreciate your trust that we will do so carefully and sensibly. This Privacy Notice describes how Amazon.com and its affiliates (collectively "Amazon") collect and process your personal information through Amazon websites, devices, products, services, online and physical stores, and applications that reference this Privacy Notice (together "Amazon Services"). <strong>By using Amazon Services, you are consenting to the practices described in this Privacy Notice.</strong></h2>
+<ul>
+<li style="font-size: 50px; margin-left: 50px;"><a href="#part1">What Personal Information About Customers Does Amazon Collect?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part2">For What Purposes Does Amazon Use Your Personal Information?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part3">What About Cookies and Other Identifiers?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part4">Does Amazon Share Your Personal Information?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part5">How Secure Is Information About Me?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part6"> What About Advertising?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part7">What Information Can I Access?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part8">What Choices Do I Have?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part9">Are Children Allowed to Use Amazon Services?</a></li>
+   <li style="font-size: 50px;margin-left: 50px;"><a href="#part10">EU-US and Swiss-US Data Privacy Framework</a></li>
+ <li style="font-size: 50px;margin-left: 50px;"><a href="#part11">Conditions of Use, Notices, and Revisions</a></li>
+    </ul>
+<section id="part1">
+    <h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">What Personal Information About Customers Does Shopzone Collect?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">We collect your personal information in order to provide and continually improve our products and services.</h2>
+<h2 style="font-size: 43px;margin-left: 50px;">Here are the types of personal information we collect:</h2>
+<ul>
+    <li style="font-size: 50px;margin-left: 50px;"><strong>Information You Give Us: </strong> We receive and store any information you provide in relation to Shopzone Services. Click here to see examples of what we collect. You can choose not to provide certain information, but then you might not be able to take advantage of many of our Shopzone Services.</li>
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Automatic Information: </strong>We automatically collect and store certain types of information about your use of Shopzone Services, including information about your interaction with products, content, and services available through Shopzone Services. Like many websites, we use "cookies" and other unique identifiers, and we obtain certain types of information when your web browser or device accesses Shopzone Services and other content served by or on behalf of Shopzone on other websites. Our physical stores may use cameras, computer vision, sensors, and other technology to gather information about your activity in the store, such as the products and services you interact with. Click here to see examples of what we collect.</li>
+<li style="font-size: 50px;margin-left: 50px;"><strong>Information from Other Sources:</strong>We might receive information about you from other sources, such as updated delivery and address information from our carriers, which we use to correct our records and deliver your next purchase more easily. Click here to see additional examples of the information we receive.</li>
+</ul>
+
+
+</section>
+<section id="part2">
+
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">For What Purposes Does Shopzone Use Your Personal Information?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">We use your personal information to operate, provide, develop, and improve the products and services that we offer our customers. These purposes include:</h2>
+
+<ul>
+    <li style="font-size: 50px;margin-left: 50px;"><strong>Purchase and delivery of products and services. </strong>  We use your personal information to take and handle orders, deliver products and services, process payments, and communicate with you about orders, products and services, and promotional offers.</li>
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Provide, troubleshoot, and improve Shopzone Services. </strong>We use your personal information to provide functionality, analyze performance, fix errors, and improve the usability and effectiveness of the Shopzone Services.</li>
+<li style="font-size: 50px;margin-left: 50px;"><strong>Recommendations and personalization. </strong> We use your personal information to recommend features, products, and services that might be of interest to you, identify your preferences, and personalize your experience with Shopzone Services.</li>
+
+
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Provide voice, image and camera services. </strong> When you use our voice, image and camera services, we use your voice input, images, videos, and other personal information to respond to your requests, provide the requested service to you, and improve our services. For more information about Alexa voice services.</li>
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Comply with legal obligations. </strong>In certain cases, we collect and use your personal information to comply with laws. For instance, we collect from sellers information regarding place of establishment and bank account information for identity verification and other purposes.</li>
+<li style="font-size: 50px;margin-left: 50px;"><strong>Communicate with you.</strong> We use your personal information to communicate with you in relation to Shopzone Services via different channels (e.g., by phone, email, chat).</li>
+<li style="font-size: 50px;margin-left: 50px;"><strong>Advertising.  </strong>We use your personal information to display interest-based ads for features, products, and services that might be of interest to you. We do not use information that personally identifies you to display interest-based ads. To learn more, please read our Interest-Based Ads notice.</li>
+<li style="font-size: 50px;margin-left: 50px;"><strong>Fraud Prevention and Credit Risks.</strong>We use personal information to prevent and detect fraud and abuse in order to protect the security of our customers, Shopzone, and others. We may also use scoring methods to assess and manage credit risks. </li>
+</ul>
+</section><section id="part3">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">What About Cookies and Other Identifiers?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">To enable our systems to recognize your browser or device and to provide and improve Shopzone Services, we use cookies and other identifiers. For more information about cookies and how we use them, please read our Cookies Notice.</h2>
+</section>
+
+
+<section id="part4">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Does Shopzone Share Your Personal Information??</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">Information about our customers is an important part of our business, and we are not in the business of selling our customers' personal information to others. We share customers' personal information only as described below and with subsidiaries Shopzone.com, Inc. controls that either are subject to this Privacy Notice or follow practices at least as protective as those described in this Privacy Notice.</h2>
+
+<ul>
+    <li style="font-size: 50px;margin-left: 50px;"><strong>Transactions involving Third Parties:</strong> We make available to you services, products, applications, or skills provided by third parties for use on or through Shopzone Services. For example, you can order products from third parties through our stores, download applications from third-party application providers from our App Store, and enable third-party skills through our Alexa services. We also offer services or sell product lines jointly with third-party businesses, such as co-branded credit cards. You can tell when a third party is involved in your transactions, and we share customers' personal information related to those transactions with that third party.</li>
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Third-Party Service Providers:  </strong>We employ other companies and individuals to perform functions on our behalf. Examples include fulfilling orders for products or services, delivering packages, sending postal mail and email, removing repetitive information from customer lists, analyzing data, providing marketing assistance, providing search results and links (including paid listings and links), processing payments, transmitting content, scoring, assessing and managing credit risk, and providing customer service. These third-party service providers have access to personal information needed to perform their functions, but may not use it for other purposes.</li>
+<li style="font-size: 50px;margin-left: 50px;"><strong>Business Transfers:</strong>As we continue to develop our business, we might sell or buy other businesses or services. In such transactions, customer information generally is one of the transferred business assets but remains subject to the promises made in any pre-existing Privacy Notice (unless, of course, the customer consents otherwise). Also, in the unlikely event that Shopzone.com, Inc. or substantially all of its assets are acquired, customer information will of course be one of the transferred assets.</li>
+
+
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Protection of Shopzone and Others:</strong> We release account and other personal information when we believe release is appropriate to comply with the law; enforce or apply our Conditions of Use and other agreements; or protect the rights, property, or safety of Shopzone, our users, or others. This includes exchanging information with other companies and organizations for fraud protection and credit risk reduction.</li>
+
+
+
+</ul>
+<h2 style="font-size: 43px;">Other than as set out above, you will receive notice when personal information about you might be shared with third parties, and you will have an opportunity to choose not to share the information.</h2>
+</section>
+<section id="part5">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">How Secure Is Information About Me?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">We design our systems with your security and privacy in mind.</h2>
+
+<ul>
+    <li style="font-size: 50px;margin-left: 50px;">We work to protect the security of your personal information during transmission by using encryption protocols and software.</li>
+
+<li style="font-size: 50px;margin-left: 50px;">We follow the Payment Card Industry Data Security Standard (PCI DSS) when handling credit card data.</li>
+<li style="font-size: 50px;margin-left: 50px;">We maintain physical, electronic, and procedural safeguards in connection with the collection, storage, and disclosure of customer personal information. Our security procedures mean that we may ask to verify your identity before we disclose personal information to you.</li>
+
+
+
+<li style="font-size: 50px;margin-left: 50px;">Our devices offer security features to protect them against unauthorized access and loss of data. You can control these features and configure them based on your needs. Click here for more information on how to manage the security settings of your device.</li>
+<li style="font-size: 50px;margin-left: 50px;">It is important for you to protect against unauthorized access to your password and to your computers, devices, and applications. We recommend using a unique password for your Shopzone account that is not used for other online accounts. Be sure to sign off when finished using a shared computer. </li>
+
+
+</ul>
+</section><section id="part6">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">What About Advertising?</h1>
+
+<ul>
+    <li style="font-size: 50px;margin-left: 50px;"><strong>Third-Party Advertisers and Links to Other Websites: </strong>Shopzone Services may include third-party advertising and links to other websites and apps. Third-party advertising partners may collect information about you when you interact with their content, advertising, and services. For more information about third-party advertising at Shopzone, including interest-based ads, please read our Interest-Based Ads notice. To adjust your advertising preferences, please go to the Your Ads Privacy Choices page.</li>
+
+<li style="font-size: 50px;margin-left: 50px;"><strong>Use of Third-Party Advertising Services:</strong>We provide ad companies with information that allows them to serve you with more useful and relevant Shopzone ads and to measure their effectiveness. We never share your name or other information that directly identifies you when we do this. Instead, we use an advertising identifier like a cookie, a device identifier, or a code derived from applying irreversible cryptography to other information like an email address. For example, if you have already downloaded one of our apps, we will share your advertising identifier and data about that event so that you will not be served an ad to download the app again. While we do not share your specific shopping actions like purchases, product views, or searches with ad companies, we may share an advertising identifier and an estimate of the value of the ads they show you on our behalf so they can serve you with more effective Shopzone ads. Some ad companies also use this information to serve you relevant ads from other advertisers. You can learn more about how to opt-out of personalized advertising (such as cross-context behavioral advertising) by going to the Your Ads Privacy Choices page.</li>
+</ul>
+</section><section id="part7">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">What Information Can I Access?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">You can access your information, including your name, address, payment options, profile information, Prime membership, household settings, and purchase history in the "Your Account" section of the website.</h2>
+</section><section id="part8">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">What Choices Do I Have?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">If you have any questions as to how we collect and use your personal information, please contact our Customer Service. Many of our Shopzone Services also include settings that provide you with options as to how your information is being used.</h2>
+
+<ul>
+    <li style="font-size: 50px;margin-left: 50px;">As described above, you can choose not to provide certain information, but then you might not be able to take advantage of many of the Shopzone Services.</li>
+
+<li style="font-size: 50px;margin-left: 50px;">You can add or update certain information on pages such as those referenced in What Information Can I Access?. When you update information, we usually keep a copy of the prior version for our records.</li>
+<li style="font-size: 50px;margin-left: 50px;">If you do not want to receive email or other communications from us, please adjust your Customer Communication Preferences. If you don't want to receive in-app notifications from us, please adjust your notification settings in the app or device.</li>
+
+
+
+<li style="font-size: 50px;margin-left: 50px;">You may adjust your personalized advertising preferences by visiting Your Ads Privacy Choices.</li>
+<li style="font-size: 50px;margin-left: 50px;">The Help feature on most browsers and devices will tell you how to prevent your browser or device from accepting new cookies or other identifiers, how to have the browser notify you when you receive a new cookie, or how to block cookies altogether. Because cookies and identifiers allow you to take advantage of some essential features of Shopzone Services, we recommend that you leave them turned on. For instance, if you block or otherwise reject our cookies, you will not be able to add items to your Shopping Cart, proceed to Checkout, or use any Services that require you to Sign in. For more information about cookies and other identifiers, see our Cookies Notice. </li>
+<li style="font-size: 50px;margin-left: 50px;">If you want to browse our websites without linking the browsing history to your account, you may do so by logging out of your account here and blocking cookies on your browser.</li>
+<li style="font-size: 50px;margin-left: 50px;">You can manage the recommendations you receive in our store here, remove recommendations you don’t want to see here by selecting View All and Manage then selecting the Remove Items toggle that appears at the top of the page, and edit your browsing history here.</li>
+<li style="font-size: 50px;margin-left: 50px;">You will also be able to opt out of certain other types of data usage by updating your settings on the applicable Shopzone website (e.g., in "Manage Your Content and Devices"), device, or application. For more information click here. Most non-Shopzone devices also provide users with the ability to change device permissions (e.g., disable/access location services, contacts). For most devices, these controls are located in the device's settings menu. If you have questions about how to change your device permissions on devices manufactured by third parties, we recommend you contact your mobile service carrier or your device manufacturer.</li>
+<li style="font-size: 50px;margin-left: 50px;">If you are a seller, you can add or update certain information in Seller Central, update your account information by accessing your Seller Account Information, and adjust your email or other communications you receive from us by updating your Notification Preferences.</li>
+<li style="font-size: 50px;margin-left: 50px;">If you are an author, you can add or update the information you have provided in the Author Portal and Author Central by accessing your accounts in the Author Portal and Author Central, respectively.</li>
+<li style="font-size: 50px;margin-left: 50px;">If you shop in our physical stores, you can manage how certain data is used to analyze the performance of our products and services, as well as learn more here.</li>
+</ul>
+<h2 style="font-size: 43px;margin-left: 50px;">In addition, to the extent required by applicable law, you may have the right to request access to or delete your personal information. If you wish to do any of these things, you may go to Data Privacy Queries. Depending on your data choices, certain services may be limited or unavailable.</h2>
+</section><section id="part9">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Are Children Allowed to Use Shopzone Services?</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">Shopzone does not sell products for purchase by children. We sell children's products for purchase by adults. If you are under 18, you may use Shopzone Services only with the involvement of a parent or guardian. We do not knowingly collect personal information from children under the age of 13 without the consent of the child's parent or guardian. For more information, please see our Children's Privacy Disclosure.</h2>
+</section><section id="part10">
+<h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EU-US and Swiss-US Data Privacy Framework</h1>
+<h2 style="font-size: 43px;margin-left: 50px;">Shopzone.com, Inc. participates in the EU-US Data Privacy Framework, the UK Extension to the EU-US Data Privacy Framework, and the Swiss-US Data Privacy Framework*. Click here to learn more.
+
+    *We will not rely on the Swiss-US Data Privacy Framework or the UK Extension to the EU-US Data Privacy Framework until they enter into force, but we adhere to their required commitments in anticipation of their doing so.</h2>
+</section><section id="part11">
+    <h1 style="font-size: 58px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Conditions of Use, Notices, and Revisions</h1>
+    <h2 style="font-size: 43px;margin-left: 50px;margin-bottom: 40px;">If you choose to use Shopzone Services, your use and any dispute over privacy is subject to this Notice and our Conditions of Use, including limitations on damages, resolution of disputes, and application of the law of the state of Washington. If you have any concern about privacy at Shopzone, please contact us with a thorough description, and we will try to resolve it. Our business changes constantly, and our Privacy Notice will change also. You should check our websites frequently to see recent changes. Unless stated otherwise, our current Privacy Notice applies to all information that we have about you and your account. We stand behind the promises we make, however, and will never materially change our policies and practices to make them less protective of customer information collected in the past without the consent of affected customers.</h2>
+    </section>
+    
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="images/logo2.jpeg" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="cloths.html">Clothing Store</a>
+                <a href="footwear.html">Trending Shoes</a>
+                <a href="homeacce.html">Home-Accessories</a>
+                <a href="grocery.html">grocerries</a>
+            </div>
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+                <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+                <a href="privacy.html">Privacy policy</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <h3>Design and Code by Krish Agarwal</h3>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

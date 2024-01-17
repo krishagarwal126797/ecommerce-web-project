@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body class="">
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                
+                       
+                <button class="btn1"onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+                <button  class="btn1"onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i></button>
+                <div id="id01" class="modal">
+
+                   <form class="modal-content animate" action="firstpage.html"onsubmit="return validateForm()" method="get" name="myForm">
+                     <div class="imgcontainer">
+                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar" class="avatar">
+                     </div>
+                 
+                     <div class="container">
+                       <label for="uname"><b>Username</b></label>
+                       <input type="text" placeholder="Enter Username" name="uname" required>
+                 
+                       <label for="psw"><b>Password</b></label>
+                       <input type="password" placeholder="Enter Password" name="psw" required>
+                         
+                       <button type="submit"class="sig" onclick="sign()"><h3>login</h3></button>
+                      
+                      
+                      
+                      
+                      
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                       <span class="psw">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 <!-- sign up form-->
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 <div id="id02" class="modal2">
+                   
+                   <form name="myForm2"class="modal2-content animate" action="firstpage.html" method="get">
+                     <div class="imgcontainer2">
+                       <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                       <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar2" class="avatar2">
+                     </div>
+                 
+                     <div class="container2">
+                      
+                        <label for="uname"><b>name</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" id="kl" required>
+                        <label for="uname2"><b>email</b></label>
+                        <input type="email" placeholder="Enter email address" name="uname2" id="kl2" required>
+                        <label for="psw2"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw2" id="kl3" required>
+                           <label for="psw21"><b>phone-number</b></label>
+                        <input type="text" placeholder="Enter number" name="psw21" id="kl4" required>
+                       
+                       
+                       
+                       <button type="submit"class="sig" onclick="sign()"><h3>signin</h3></button>
+                       <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                       </label>
+                     </div>
+                 
+                     <div class="container2" style="background-color:#f1f1f1">
+                       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                       <span class="psw2">Forgot <a href="#">password?</a></span>
+                     </div>
+                   </form>
+                 </div>
+                 
+                 <script>
+                 // Get the modal
+                 var modal = document.getElementById('id01');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal) {
+                         modal.style.display = "none";
+                     }}
+                     var modal2 = document.getElementById('id02');
+                 
+                 // When the user clicks anywhere outside of the modal, close it
+                 window.onclick = function(event) {
+                     if (event.target == modal2) {
+                         modal12.style.display = "none";
+                     }
+                 }
+                 function sign() {
+
+                   let x = document.forms["myForm"]["uname"].value;
+let y = document.forms["myForm"]["psw"].value;
+let a = document.forms["myForm"]["uname2"].value;
+let b = document.forms["myForm"]["psw2"].value;
+if(x==""){
+alert("user name must be filled:");
+}
+else if(y==""){
+alert("password must be filled:");
+}
+else if(a==""){
+alert("email must be filled:");
+}
+else if(b==""){
+alert("phone number must be filled:");
+}
+else{
+alert("you are sucessfully login:");
+
+                     }
+                     
+
+                 }
+                 </script>
+                    
+                
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li onclick="window.location.href='firstpage.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">HOME</li>
+                <li onclick="window.location.href='about.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">ABOUT</li>
+                <li onclick="window.location.href='team.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">TEAM</li>
+                <li onclick="window.location.href='contact.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">CONTACT</li>
+               <a href="footwear.html">FOOTWEAR</a>
+               <a href="electronics.html">ELECTRONICS</a>
+               <a href="beauty.html">BEAUTY-PRODUCTS</a>
+               <a href="cloths.html">MENS-WEAR</a>
+               <a href="wocloths.html">WOMENS-WEAR</a>
+               <a href="chcloths.html">KIDS-WEAR</a>
+               <a href="watchs.html">WATCHES</a>
+               <a href="mobile.html">MOBILE</a>
+               <a href="homeacce.html">HOME-Accesories</a>
+               <a href="kitchen.html">KITCHEN</a>
+               <a href="grocery.html">GROCERY</a>
+               <a href="jewel.html">JEWELIRY</a>
+               <a href="bag.html" style="color: white;">BAGS</a>
+               <a href="sunglass.html">SUNGLASSES</a>
+               <a href="kidtoy.html">KIDS-TOY</a>
+               <a href="homeapp.html">HOME-APPLIANCES</a>
+               <a href="homedecor.html">HOME-DECOR</a>
+              </div>
+              
+              <div id="main">
+                
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+                
+            
+
+            <ul class="menu-items">
+                <li><a href="firstpage.html" style="color: blueviolet;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+            </div>
+            <form role="search">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                </div>
+            </form>
+        </div>
+        
+    </nav>
+<h2 class="iop" style="display: flex; text-align: center;">BAGS</h2>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/bagslider1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/bagslider2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/bagslider3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+
+
+    <div class="container">
+
+
+
+
+        <header>
+            <div class="shopping">
+                
+                <button id="end" style="position: relative;right: 800px; height: 100px; width: 100px; background-image: url(images/addtoc.jpeg);background-size: cover;"><h3>click me</h3></button>
+              <span class="quantity">0</span>
+            </div>
+            <h2 class="open">open</h4>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>PRODUCTS</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <div class="nextpage">buy-now</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="images/logo2.jpeg" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="cloths.html">Clothing Store</a>
+                <a href="footwear.html">Trending Shoes</a>
+                <a href="homeacce.html">Home-Accessories</a>
+                <a href="grocery.html">grocerries</a>
+            </div>
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+                <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+                <a href="privacy.html">Privacy policy</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <h3>Design and Code by Krish Agarwal</h3>
+            </div>
+        </div>
+    </footer>
+        
+    <script>let openShopping = document.getElementById('end');
+        let closeShopping = document.querySelector('.closeShopping');
+        let list = document.querySelector('.list');
+        let listCard = document.querySelector('.listCard');
+        let body = document.querySelector('body');
+        let total = document.querySelector('.total');
+        let quantity = document.querySelector('.quantity');
+        let nextpage=document.querySelector('.nextpage');
+        openShopping.addEventListener('click', ()=>{
+            body.classList.add('active');
+        })
+        closeShopping.addEventListener('click', ()=>{
+            body.classList.remove('active');
+        })
+        nextpage.addEventListener('click', ()=>{
+            window.location.replace("checkoutform.html")
+        })
+        let products = [
+            {
+                id: 1,
+                name: 'HARISSONS Bags Vervo 15.6-inch Laptop/Travel/Casual Backpack for Men and Women with Rain Cover (Navy Blue, 40 Ltrs) |',
+                image: "beg for man/beg1.jpg",
+                price: 2560.00,
+                
+                 des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+            },
+            {
+                id: 2,
+                name: 'Lunars Bingo - 48 L Laptop Office/School/Travel/Business Backpack Water Resistant - Fits Up to 15.6 Inch Laptop Notebook with 1 Year Warranty',
+                image: 'beg for man/beg2.jpg',
+                price: 899.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star"></span>`    
+            },
+            {
+                id: 3,
+                name: 'Zipline Unisex casual polyester 36 L Backpack School Bag Women Men Boys Girls children Daypack College Bag Book School Sports Bag Weekend Bag',
+                image: 'beg for man/beg3.jpg',
+                price: 899.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>`
+                
+            },
+            {
+                id: 4,
+                name: 'FUR JADEN Travel Laptop Backpack, Business Backpacks with USB Charging Port, Water Resistant College School Computer Bag for Men & Women Fits Under 15.6 inch Laptop and Notebook',
+                image: 'beg for man/beg4.jpg',
+                price: 999.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 5,
+                name: 'ADISA 32 Ltrs Water Resistant Casual Travel Bagpack/College Backpack/School Office Bag for Men and Women',
+                image: 'beg for man/beg5.jpg',
+                price: 1799.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>`
+            },
+            {
+                id: 6,
+                name: 'URBAN CARRIER Large 45 Liters Medium Backpack for school and colleges laptop bag luggage bag travel bag Unisex office bag for men Waterproof School Bag for girls stylish backpack for men',
+                image: 'beg for man/beg6.jpg',
+                price: 1999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 7,
+                name: 'Half Moon 30L Water Resistant 15.6 inch Laptop Bag/Backpack for Men | School Bag for Boys Girls | Office Bag pack for Men/Office Back Packed for Women with Padded Laptop Compartment',
+                image: 'beg for man/beg7.jpg',
+                price: 1799.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+            },
+                 {
+                id: 8,
+                name: 'Wooum 48 L Casual Water Resistance Laptop Bag/Backpack for Men Women Boys Girls/Office School College Teens & Students with 15.6 Inch Laptop Compartment 50x37x26Cm (Black)',
+                image: 'beg for man/beg8.jpg',
+                price: 1499.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 9,
+                name: 'Skybags Unisex Printed School Backpack For Kids, 02 Red, (Marvel Spiderman)',
+                image: 'beg for man/beg9.jpg',
+                price: 2198.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 10,
+                name: 'Skybags Unisex Printed School Backpack For Kids, Black (Ironman Marvel)',
+                image: 'beg for man/beg10.jpg',
+                price: 1499.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 11,
+                name: 'Skybags One Size Brat 46 Cms, 22 Ltrs Casual Backpack- Sea Green',
+                image: 'beg for man/beg11.jpg',
+                price: 735.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 12,
+                name: 'Skybags Unisex Printed School Backpack For Kids, Blue (Squad Pro 01)',
+                image: 'beg for man/beg12.jpg',
+                price: 1415.00,
+                des:`<span>2.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star"></span>`
+              
+
+            },
+            {
+                id: 13,
+                name: 'Safari Seek 45 Ltrs Overnighter Expandable Travel Laptop Backpack',
+                image: 'beg for man/beg13.jpg',
+                price: 2099.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 14,
+                name: 'Safari Large Size 32 Ltrs Casual Backpack-Black',
+                image: 'beg for man/beg14.jpg',
+                price: 899.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 15,
+                name: 'Zipline Unisex Casual Polyester 36 L Blue Backpack School Bag Women Men Boys Girls College Bag',
+                image: 'beg for man/beg15.jpg',
+                price: 1149.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 16,
+                name: 'Safari Small Size 15 Ltrs Unisex Casual Backpack - Sea Blue',
+                image: 'beg for man/beg16.jpg',
+                price: 352.00,
+                des:`<span>4.7</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 17,
+                name: `Skybags Unisex Fuse 27L Backpack Deep Water
+`,
+                image: 'beg for man/beg17.jpg',
+                price: 799.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 18,
+                name: 'Safari Omega 30L Laptop Backpack with Raincover, school bag for boys and girls,',
+                image: 'beg for man/beg18.jpg',
+                price: 699.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 19,
+                name: 'Genie Camellia School Bag for Girls, 17 inch Backpack for Women, 3 compartments Water Resistant Stylish and Trendy College Backpacks for Girls',
+                image: 'beg for wooman/beg.jpg',
+                price: 699.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 20,
+                name: 'Genie Snowflake 36 Litres Teal & Blue School Backpack (19 inch, Water resistant)',
+                image: 'beg for wooman/beg2.jpg',
+                price: 1349.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 21,
+                name: 'Genie Spray School Bag for Girls, 19 inch Backpack for Women, 3 compartments Water Resistant Stylish and Trendy College Backpacks for Girls',
+                image: 'beg for wooman/beg3.jpg',
+                price: 929.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 22,
+                name: 'Genie Unicorn School Bag for Girls, 17 inch Blue Backpack for Women',
+                image: 'beg for wooman/beg4.jpg',
+                price: 799.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 23,
+                name: 'Genie Summer School Bag for Girls, 17 inch. Pastel Lavender colour Backpack for Women',
+                image: 'beg for wooman/beg5.jpg',
+                price: 825.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 24,
+                name: 'Genie Littlehearts Backpack for Women - 2 compartments, School Bags for Girls, Stylish',
+                image: 'beg for wooman/beg6.jpg',
+                price: 749.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked  "></span>`
+              
+
+            },
+            {
+                id: 25,
+                name: 'Genie Iridescence School Bag for Girls, 17 inch Backpack for Women, 3 Zips Water Resistant',
+                image: 'beg for wooman/beg7.jpg',
+                price: 698.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 26,
+                name: 'Genie Zinnia School Bag for Girls, 19 inch Backpack for Women, 3 compartments',
+                image: 'beg for wooman/beg8.jpg',
+                price: 799.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 27,
+                name: 'Genie Lush School Bag for Girls, 19 inch Backpack for Women, 3 compartments Water RESISTANT',
+                image: 'beg for wooman/beg9.jpg',
+                price: 930.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 28,
+                name: 'Genie Harmony Anti-theft Backpacks for Women, 10 Ltrs, Water Resistant and Lightweight',
+                image: 'beg for wooman/beg10.jpg',
+                price: 539.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 29,
+                name: `Genie Sunshine 19 inch ash Green Bag for Girls, 19 inch Backpack for Women`,
+                image: 'beg for wooman/beg11.jpg',
+                price: 872.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 30,
+                name: 'Genie Snowflake 36 Litres Teal & Blue School Backpack (19 inch, Water resistant)',
+                image: 'beg for wooman/beg12.jpg',
+                price: 1394.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 31,
+                name: 'Skybags Unisex Printed School Backpack For Kids, 04 Blue (Disney Frozen New)',
+                image: 'beg for wooman/beg13.jpg',
+                price: 844.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 32,
+                name: 'Genie Lush School Bag for Girls, 19 inch Backpack for Women, 3 compartments Water RESISTANT',
+                image: 'beg for wooman/beg14.jpg',
+                price: 929.00,
+                des:`<span>4.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>`
+              
+
+            },
+            {
+                id: 33,
+                name: 'Tinytot 30 Litre, Stylish & Trendy Water Resistant Hi Storage School Collage Travel',
+                image: 'beg for wooman/beg15.jpg',
+                price: 999.00,
+                des:`<span>3.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },         {
+                id: 34,
+                name: `Genie Ella School Bag for Girls. Black backpack for women. More Volume, 3 zips, Stylish & Trendy College Bags for Girls, Water Resistant, Lightweight Bags for Office, Travelling. 36 litres. 19"
+`,
+                image: 'beg for wooman/beg16.jpg',
+                price:979.00,
+                des:`<span>4.0</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 35,
+                name: 'Blue Tree Soft Material School Bag for Kids Plush Backpack Cartoon Toy | Childrens Gifts Boy/Girl/Baby/Decor School Bag for Kids(Age 2 to 6 Year) (Tweety)',
+                image: 'beg for wooman/beg17.jpg',
+                price: 298.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+            {
+                id: 36,
+                name: 'Genie Heartbeat Backpack for Women 3 compartments, School Bags for Girls',
+                image: 'beg for wooman/beg18.jpg',
+                price: 799.00,
+                des:`<span>3.5</span>
+                 <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star-half-full checked "></span>
+ <span class="fa fa-star "></span>`
+              
+
+            },
+
+        ];
+        let listCards  = [];
+        function initApp(){
+            products.forEach((value, key) =>{
+                let newDiv = document.createElement('div');
+                newDiv.classList.add('item');
+                newDiv.innerHTML = `
+                    <img src="images/${value.image}">
+                    <div class="title">${value.name}</div>
+                    <div class="des">${value.des}</div>
+  
+ <h3 class="jk">in stock</h3></div>
+                    <div class="price"><span style='font-size: 100;'>&#8377</span><strong>${value.price.toLocaleString()}</strong></div>
+                    <button onclick="addToCard(${key})">Add To Card</button>
+                   ` 
+                list.appendChild(newDiv);
+            })
+        }
+        initApp();
+        function addToCard(key){
+            if(listCards[key] == null){
+                // copy product form list to list card
+                listCards[key] = JSON.parse(JSON.stringify(products[key]));
+                listCards[key].quantity = 1;
+            }
+            reloadCard();
+        }
+        function reloadCard(){
+            listCard.innerHTML = '';
+            let count = 0;
+            let totalPrice = 0;
+            listCards.forEach((value, key)=>{
+                totalPrice = totalPrice + value.price;
+                count = count + value.quantity;
+                if(value != null){
+                    let newDiv = document.createElement('li');
+                    newDiv.innerHTML = `
+                        <div><img src="images/${value.image}"/></div>
+                        <div>${value.name}</div>
+                        <div>${value.price.toLocaleString()}</div>
+                        <div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                            <div class="count">${value.quantity}</div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                        </div>`;
+                        listCard.appendChild(newDiv);
+                }
+            })
+            total.innerText = totalPrice.toLocaleString();
+            quantity.innerText = count;
+        }
+        function changeQuantity(key, quantity){
+            if(quantity == 0){
+                delete listCards[key];
+            }else{
+                listCards[key].quantity = quantity;
+                listCards[key].price = quantity * products[key].price;
+            }
+            reloadCard();
+        }
+        </script>
+</body>
+</html>

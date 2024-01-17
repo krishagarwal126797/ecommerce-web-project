@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+   
+
+.grid-container{
+            display: grid;
+            grid-template-columns: 40px auto auto auto auto auto;
+            gap: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            box-shadow: 1px 1px 1px 1px blueviolet;
+            margin: 20px;
+        }
+        .grid-container > div {
+            background-color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 80px 0;
+            font-size: 30px;
+        }
+        .item1{
+            grid-row: 1/4;
+        }
+        .footwear{
+            font-size:20px;
+            text-decoration:underline;
+            text-decoration-color: rgb(255, 129, 236);    
+            position: relative;
+            left: 400px; 
+            top:-18px; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .footwearcont{
+            font-size: 20px;
+             margin-top:40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          position: relative;
+          left:300px;
+        }
+        .part{
+            position: relative;
+            bottom: -350px;
+            right: 450px;
+            font-size: 30px;
+        }
+        .ad{
+            height: 50px; width: 60px; position: relative;bottom: -330px;right: 650px;
+        }
+        .grid-container2 {
+  display: grid;
+  column-gap: 8px;
+  grid-template-columns: auto auto auto auto;
+  background-color: #000000;
+  padding: 0px;
+}
+
+.grid-item2 {
+    background-image: linear-gradient(gray,white);
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <body>
+        <section class=" top-txt ">
+            <div class="head container ">
+                <div class="head-txt ">
+                    <p>Free shipping, 30-day return or refund guarantee.</p>
+                </div>
+                <div class="sing_in_up ">
+                        
+                    <button class="btn1"onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+                    <button  class="btn1"onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i></button>
+                    <div id="id01" class="modal">
+ 
+                       <form class="modal-content animate" action="firstpage.html"onsubmit="return validateForm()" method="get" name="myForm">
+                         <div class="imgcontainer">
+                           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                           <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar" class="avatar">
+                         </div>
+                     
+                         <div class="container">
+                           <label for="uname"><b>Username</b></label>
+                           <input type="text" placeholder="Enter Username" name="uname" required>
+                     
+                           <label for="psw"><b>Password</b></label>
+                           <input type="password" placeholder="Enter Password" name="psw" required>
+                             
+                           <button type="submit"class="sig" onclick="sign()"><h3>login</h3></button>
+                          
+                          
+                          
+                          
+                          
+                           <label>
+                             <input type="checkbox" checked="checked" name="remember"> Remember me
+                           </label>
+                         </div>
+                     
+                         <div class="container" style="background-color:#f1f1f1">
+                           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                           <span class="psw">Forgot <a href="#">password?</a></span>
+                         </div>
+                       </form>
+                     </div>
+                     <!-- sign up form-->
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     <div id="id02" class="modal2">
+                       
+                       <form name="myForm2"class="modal2-content animate" action="firstpage.html" method="get">
+                         <div class="imgcontainer2">
+                           <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                           <img src="https://i.pinimg.com/564x/2e/4f/d3/2e4fd3fd8f2aff9c26b15c1f1c23b11e.jpg" alt="Avatar2" class="avatar2">
+                         </div>
+                     
+                         <div class="container2">
+                          
+                       <label for="uname"><b>name</b></label>
+                       <input type="text" placeholder="Enter Username" name="uname" id="kl" required>
+                       <label for="uname2"><b>email</b></label>
+                       <input type="email" placeholder="Enter email address" name="uname2" id="kl2" required>
+                       <label for="psw2"><b>Password</b></label>
+                       <input type="password" placeholder="Enter Password" name="psw2" id="kl3" required>
+                          <label for="psw21"><b>phone-number</b></label>
+                       <input type="text" placeholder="Enter number" name="psw21" id="kl4" required>
+                           
+                           
+                           <button type="submit"class="sig" onclick="sign()"><h3>signin</h3></button>
+                           <label>
+                             <input type="checkbox" checked="checked" name="remember"> Remember me
+                           </label>
+                         </div>
+                     
+                         <div class="container2" style="background-color:#f1f1f1">
+                           <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                           <span class="psw2">Forgot <a href="#">password?</a></span>
+                         </div>
+                       </form>
+                     </div>
+                     
+                     <script>
+                     // Get the modal
+                     var modal = document.getElementById('id01');
+                     
+                     // When the user clicks anywhere outside of the modal, close it
+                     window.onclick = function(event) {
+                         if (event.target == modal) {
+                             modal.style.display = "none";
+                         }}
+                         var modal2 = document.getElementById('id02');
+                     
+                     // When the user clicks anywhere outside of the modal, close it
+                     window.onclick = function(event) {
+                         if (event.target == modal2) {
+                             modal12.style.display = "none";
+                         }
+                     }
+                     function sign() {
+
+                       let x = document.forms["myForm"]["uname"].value;
+ let y = document.forms["myForm"]["psw"].value;
+ let a = document.forms["myForm"]["uname2"].value;
+ let b = document.forms["myForm"]["psw2"].value;
+ if(x==""){
+   alert("user name must be filled:");
+ }
+ else if(y==""){
+   alert("password must be filled:");
+ }
+else if(a==""){
+   alert("email must be filled:");
+ }
+ else if(b==""){
+   alert("phone number must be filled:");
+ }
+ else{
+   alert("you are sucessfully login:");
+  
+                         }
+                         
+ 
+                     }
+                     </script>
+                    
+                </div>
+            </div>
+        </section>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <li onclick="window.location.href='firstpage.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">HOME</li>
+                    <li onclick="window.location.href='about.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">ABOUT</li>
+                    <li onclick="window.location.href='team.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">TEAM</li>
+                    <li onclick="window.location.href='contact.html'" style="list-style-type: none; font-size: 30px; text-align: center; color: #903cff; margin-bottom: 10px;">CONTACT</li>
+                   <a href="footwear.html">FOOTWEAR</a>
+                   <a href="electronics.html">ELECTRONICS</a>
+                   <a href="beauty.html">BEAUTY-PRODUCTS</a>
+                   <a href="cloths.html">MENS-WEAR</a>
+                   <a href="wocloths.html">WOMENS-WEAR</a>
+                   <a href="chcloths.html">KIDS-WEAR</a>
+                   <a href="watchs.html">WATCHES</a>
+                   <a href="mobile.html">MOBILE</a>
+                   <a href="homeacce.html">HOME-Accesories</a>
+                   <a href="kitchen.html">KITCHEN</a>
+                   <a href="grocery.html">GROCERY</a>
+                   <a href="jewel.html">JEWELIRY</a>
+                   <a href="bag.html">BAGS</a>
+                   <a href="sunglass.html">SUNGLASSES</a>
+                   <a href="kidtoy.html">KIDS-TOY</a>
+                   <a href="homeapp.html">HOME-APPLIANCES</a>
+                   <a href="homedecor.html">HOME-DECOR</a>
+                  </div>
+                  
+                  <div id="main">
+                    
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+                  </div>
+                  
+                  <script>
+                  function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+                  }
+                  
+                  function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft= "0";
+                  }
+                  </script>
+                    
+                
+    
+                <ul class="menu-items">
+                    <li><a href="firstpage.html">Home</a></li>
+                    <li><a href="about.html" style="color: blueviolet">About</a></li>
+                    <li><a href="team.html">team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="logo">
+                    <img src="images/logo2.jpeg" alt="" style="border-radius: 6px;">
+                </div>
+                <form role="search">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" onmouseup="window.location.href='search.html'"><button class="btn0"><i class="fa fa-search" style="font-size: 20px;"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+        </nav>
+ <div class="about" style="height: 600px; width: 100%;">
+<img src="images/about1slide.jpg" style="height: 600px; width: 100%;object-fit: cover;">
+
+</div>
+<h1 style="margin: 10px;text-align: center;">OUR PRODUCTS</h1>
+<!-- container 1-->
+<div class="grid-container">
+    <div class="item1"><img src="images/slider6.jpg" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">FOOTWEAR</h4>
+    <h2 class="footwearcont">Explore a wide range of stylish and high-quality men's footwear at Campus Shoes. Find the perfect pair for every occasion and step up your style game.Buy Footwear Online in India - Choose from a variety of options. Shopzone Shoes brings to you the best collection of footwear online for men, women and kids. Complete your outfit with India's most trusted footwear brands.</p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+<img src="images/about1.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 750px;">
+<img src="images/about2.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 730px;">
+<img src="images/about3.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 700px;">
+<h3 style=" height: 50px; width: 100px; position: relative;bottom: -270px;right:480px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+</div>
+</div>
+
+<!-- container 2-->
+<div class="grid-container">
+    <div class="item1"><img src="images/slider1.avif" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">ELECTRONICS</h4>
+    <h2 class="footwearcont"> Choose from a wide range of mobiles, washing machine, camera, laptop & many more from the top brands & get exciting deals & offers.Discover the best Electronics in Best Sellers. Find the top 100 most popular items in Shopzone Electronics Best Sellers.Get a chance to experience a first-class retail experience from one of the leading electronics giants.It's almost certain that Shopzone will purchase any electronic device you have.  </p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+    <img src="images/about5.png" style=" height: 50px; width: 60px; position: relative;bottom: -350px;right: 750px;">
+    <img src="images/about6.png" style=" height: 50px; width: 60px; position: relative;bottom: -350px;right: 730px;">
+    <img src="images/about7.png" style=" height: 50px; width: 60px; position: relative;bottom: -350px;right: 700px;">
+    <h3 style=" height: 50px; width: 100px; position: relative;bottom: -270px;right:480px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+    </div>
+</div>
+<!-- container 3-->
+<div class="grid-container">
+    <div class="item1"><img src="images/slider12.jpeg" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">Home Electronics</h4>
+    <h2 class="footwearcont">Buy Home Appliances Online at Best Prices in India . Shop from huge collection of Home Products like AC, Washing Machine, Fridge, TV.Find here online price details of companies selling Electric Home Appliance. Get info of suppliers, manufacturers, exporters, traders of Electric Home Appliances</p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+    <img src="images/about9.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 750px;">
+    <img src="images/about10.jpeg" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 730px;">
+    <img src="images/about11.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 700px;">
+    <h3 style=" height: 50px; width: 100px; position: relative;bottom: -290px;right:480px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+    </div>
+</div>
+<!-- container 4-->
+<div class="grid-container">
+    <div class="item1"><img src="images/slider2.jpeg" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">BEAUTY-PRODUCTS</h4>
+    <h2 class="footwearcont">Shopzone Beauty: Shop for Beauty products, Cosmetics, Makeup, Personal care products & more online at best prices in India. Choose from a wide range of Brands.Online shopping for Beauty from a great selection of Lips, Nails, Face & more, Eyes & more at everyday low prices.Skin Care: Buy the latest Skin Care products at Shopzone.in. Choose from a wide range of Skin Care products at amazing prices, brands, discounts.Explore Makeup on Amazon. Shop makeup products for eyes, face, lips, and more from best-selling brands like Maybelline, Covergirl, Stila, and more.</p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+    <img src="images/about12.png" style=" height: 50px; width: 60px; position: relative;bottom: -350px;right: 800px;">
+    <img src="images/about14.png" style=" height: 50px; width: 60px; position: relative;bottom: -350px;right: 790px;">
+    <img src="images/about15.png" style=" height: 50px; width: 60px; position: relative;bottom: -350px;right: 780px;">
+    <h3 style=" height: 50px; width: 100px; position: relative;bottom: -300px;right:530px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+    </div>
+</div>
+<!-- container 5-->
+<div class="grid-container">
+    <div class="item1"><img src="images/fashion.jpeg" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">fashion products</h4>
+    <h2 class="footwearcont">Find a wide selection of women's clothing and men's Clothing at Shopzone.com. Free shipping and free returns on eligible items.Our shopping experts chose the best and most stylish women's and men's clothes for fall from Shopzone Fashion.Shopzone has become a fashion destination in its own right, and these 15 clothing brands are our absolute favorites for finding beautiful clothes.</p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+    <img src="images/about16.jpeg" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 750px;">
+    <img src="images/about17.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 730px;">
+    <img src="images/about18.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 700px;">
+    <h3 style=" height: 50px; width: 100px; position: relative;bottom: -270px;right:480px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+    </div>
+</div>
+<!-- container 6-->
+<div class="grid-container">
+    <div class="item1"><img src="images/aboutslider1.jpeg" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">kitchen-products</h4>
+    <h2 class="footwearcont">Online shopping for Home & Kitchen from a great selection of Bar Accessories, Baking Tools & Accessories, Chopping Boards, Kitchen Knives, Manual Choppers and more at Low prices. Shop from a wide range of Kitchen & Dining products at Shopzone.in. Amazing Discounts, Free Shipping, Cash on DeliveryNo Cost EMI Available. Low Prices. Easy & Fast Delivery. Best Deals. Top Brands. Great Offers. Huge Selection available on eligible.</p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+    <img src="images/about19.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 800px;">
+    <img src="images/about20.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 780px;">
+    <img src="images/about21.jpeg" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 760px;">
+    <h3 style=" height: 50px; width: 100px; position: relative;bottom: -270px;right:550px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+    </div>
+</div>
+<!-- container 7-->
+<div class="grid-container">
+    <div class="item1"><img src="images/aboutslider2.jpeg" style="height: 300px; width: 400px; position: relative; top:-50px;"></div>
+    <h1  class="footwear">GROCERRIES</h4>
+    <h2 class="footwearcont">Shop Grocery Items through Amazon Pantry online Super Market store at Best Prices in India at Shopzone.in. Checkout wide range selection of grocery.Online shopping for Top offers on Grocery essentials from a great selection at Grocery & Gourmet Foods Store.Online shopping for Grocery & Gourmet Foods from a great selection of Tea, Coffee & Juices, Dry Fruits & Nuts, Biscuits & Chips, Breakfast Cereals & more.</p>
+<h3 class="part">our product distributers</h3>
+<div class="item2">
+    <img src="images/about22.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 750px;">
+    <img src="images/about23.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 730px;">
+    <img src="images/about24.png" style=" height: 50px; width: 60px; position: relative;bottom: -330px;right: 700px;">
+    <h3 style=" height: 50px; width: 100px; position: relative;bottom: -270px;right:480px; border: 1px solid black;font-size: 22px; text-align: center; border-radius: 10px; background-color: #111; color: #fff; font-family:'Times New Roman', Times, serif; ">And more </h2>
+    </div>
+</div>
+<div class="browse" style="margin-top: 100px; height: 1600px;">
+    <h1 style="text-align: center; font-size: 50px; margin: 30px;">browse with ease, shop with condfidence</h1>
+    <div class="grid-container2">
+        <div class="grid-item2"><img src="images/reputation.png"   style="height: 100px; width: 120px;">
+        <h2>Customer Satisfaction</h2>
+        <h3 style="margin-top:30px;font-size: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: #534f4f;">Once you place order on SHOPZONE.com. we will give a gurrented customer satisfaction and best products. </h4>
+        </div>
+        <div class="grid-item2"><img src="images/security.png" style="height: 100px; width: 120px;">
+         <h2>Secure Payments</h2>
+         <h3 style="margin-top:30px;font-size: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: #534f4f;">Your Data security & privacy is our priority.Pay securely through 128 bit encrypted payment gateway.We support credit cards,net banking and debits cards.</h4>
+        </div>
+        <div class="grid-item2"><img src="images/discount.png" style="height: 100px; width: 120px;">
+         <h2>Exclusive Offers</h2>
+         <h3 style="margin-top:30px;font-size: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: #534f4f;">Now enjoy thebenefits of SHOPZONE exclusive offers. Subscribe SHOPZONE.com to remain updated on latest offers.</h4>
+        </div>  
+        <div class="grid-item2"><img src="images/free-shipping.png" style="height: 100px; width: 120px;">
+         <h2>Free Shipping</h2>
+         <h3 style="margin-top:30px;font-size: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: #534f4f;">Avail Free & Safe Shipping in serviceable pin codes,whenever you shop from https://www.Shopzone.com/in We take pride in delivering most of our orders on priority. </h4>
+        </div> 
+        
+      </div>
+      <h1 style="margin-top: 50px;">Buy SHOPZONE products like TV,groceries,Appliances and Air conditioners and more with a best and exciting offers and best customer services.</p>
+</div>
+<footer>
+    <div class="footer-container container">
+        <div class="content_1">
+            <img src="images/logo2.jpeg" alt="logo">
+            <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+            <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+        </div>
+        <div class="content_2">
+            <h4>SHOPPING</h4>
+            <a href="cloths.html">Clothing Store</a>
+            <a href="footwear.html">Trending Shoes</a>
+            <a href="homeacce.html">Home-Accessories</a>
+            <a href="grocery.html">grocerries</a>
+        </div>
+        <div class="content_3">
+            <h4>SHOPPING</h4>
+            <a href="contact.html">Contact Us</a>
+            <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+            <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+            <a href="privacy.html">Privacy policy</a>
+        </div>
+        <div class="content_4">
+            <h4>NEWLETTER</h4>
+            <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+            <div class="f-mail">
+                <input type="email" placeholder="Your Email">
+                <i class='bx bx-envelope'></i>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="f-design">
+        <div class="f-design-txt container">
+            <h3>Design and Code by Krish Agarwal</h3>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
